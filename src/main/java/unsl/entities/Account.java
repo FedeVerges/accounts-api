@@ -5,7 +5,7 @@ import javax.swing.border.EmptyBorder;
 
 @Entity
 @Table(name = "accounts", uniqueConstraints = {@UniqueConstraint(columnNames = {"id"})})
-public class Accounts {
+public class Account {
     public static enum Currency {
         PESO_AR,
         DOLAR,
@@ -24,7 +24,7 @@ public class Accounts {
     private float account_balance;
 
     @JsonProperty("holder")
-    private String holder;
+    private Long holder;
 
     @Enumerated(EnumType.STRING)
     @JsonProperty("currency")
@@ -49,11 +49,11 @@ public class Accounts {
         this.account_balance = account_balance;
     }
 
-    public String getHolder() {
+    public Long getHolder() {
         return holder;
     }
 
-    public void setHolder(String holder) {
+    public void setHolder(Long holder) {
         this.holder = holder;
     }
 
