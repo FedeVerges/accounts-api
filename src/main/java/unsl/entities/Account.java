@@ -1,5 +1,7 @@
 package unsl.entities;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import javax.swing.border.EmptyBorder;
 
